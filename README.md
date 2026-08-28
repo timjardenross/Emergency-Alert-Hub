@@ -1,6 +1,6 @@
 # Emergency Alert Hub
 
-Static GitHub Pages dashboard for bushfire forward risk and public ANZ / Suncorp site-list planning.
+Static GitHub Pages dashboard for bushfire forward risk and public site-list planning.
 
 ## What it includes
 

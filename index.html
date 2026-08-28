@@ -6,7 +6,7 @@
     <title>Emergency Alert Hub</title>
     <meta
       name="description"
-      content="Bushfire forward risk and public site list for ANZ and Suncorp footprint planning."
+      content="Bushfire forward risk and public site list."
     />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./data.js"></script>
@@ -15,7 +15,6 @@
   <body>
     <header class="topbar">
       <div class="topbar__brand">
-        <div class="topbar__mark">ANZ-style business view</div>
         <div class="topbar__title">Emergency Alert Hub</div>
       </div>
       <nav class="topbar__nav" aria-label="Primary">
@@ -27,17 +26,17 @@
     <div class="page-shell">
       <section class="hero" id="overview">
         <div class="hero__intro">
-          <div class="hero__eyebrow">Business risk and service continuity</div>
-          <h1>Bushfire forward view for public ANZ and Suncorp locations</h1>
+          <div class="hero__eyebrow">Public risk view</div>
+          <h1>Bushfire forward view for public locations</h1>
           <p class="hero__lede">
-            A clean business-facing dashboard for comparing state exposure,
-            monitoring public site lists, and scanning likely operational impacts.
+            A plain dashboard for comparing state exposure, monitoring public
+            site lists, and scanning likely operational impacts.
           </p>
         </div>
         <div class="hero__meta">
           <span>Forward horizon: 26 Aug - 31 Dec 2026</span>
           <span>Public locations only</span>
-          <span>Indicative, not internal register</span>
+          <span>Indicative only</span>
           <span id="last-updated">Last updated: pending</span>
         </div>
       </section>
@@ -49,7 +48,7 @@
           <div>
             <h2>Site list</h2>
             <p>
-              Filter public locations by state, brand, site type, or risk rating.
+              Filter public locations by state, category, site type, or risk rating.
             </p>
           </div>
           <div class="legend legend--stacked">
@@ -99,7 +98,7 @@
               <tr>
                 <th>State</th>
                 <th>Site</th>
-                <th>Brand</th>
+                <th>Category</th>
                 <th>Type</th>
                 <th>Rating</th>
                 <th>Direct area</th>
@@ -128,7 +127,7 @@
       <section class="panel" id="method">
         <div class="panel__header">
           <div>
-            <h2>Method and caveat</h2>
+            <h2>Method</h2>
             <p>How the ratings are derived and how to use the site list.</p>
           </div>
         </div>
