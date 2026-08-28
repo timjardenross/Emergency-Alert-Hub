@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Alert Hub</title>
+    <meta
+      name="description"
+      content="Bushfire forward risk and public site list for ANZ and Suncorp footprint planning."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./data.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <div class="topbar__mark">ANZ-style business view</div>
+        <div class="topbar__title">Emergency Alert Hub</div>
+      </div>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#sites">Site list</a>
+        <a href="#method">Method</a>
+      </nav>
+    </header>
+    <div class="page-shell">
+      <section class="hero" id="overview">
+        <div class="hero__intro">
+          <div class="hero__eyebrow">Business risk and service continuity</div>
+          <h1>Bushfire forward view for public ANZ and Suncorp locations</h1>
+          <p class="hero__lede">
+            A clean business-facing dashboard for comparing state exposure,
+            monitoring public site lists, and scanning likely operational impacts.
+          </p>
+        </div>
+        <div class="hero__meta">
+          <span>Forward horizon: 26 Aug - 31 Dec 2026</span>
+          <span>Public locations only</span>
+          <span>Indicative, not internal register</span>
+          <span id="last-updated">Last updated: pending</span>
+        </div>
+      </section>
+
+      <section class="feature-grid" id="state-cards" aria-label="State summaries"></section>
+
+      <section class="panel panel--accent" id="sites">
+        <div class="panel__header">
+          <div>
+            <h2>Site list</h2>
+            <p>
+              Filter public locations by state, brand, site type, or risk rating.
+            </p>
+          </div>
+          <div class="legend legend--stacked">
+            <div class="legend__row">
+              <span class="badge badge--high">High</span>
+              <span class="badge badge--moderate">Moderate</span>
+              <span class="badge badge--watch">Watch</span>
+              <span class="badge badge--low">Low</span>
+            </div>
+            <div class="legend__row legend__row--actions">
+              <button class="btn btn--ghost" id="download-states" type="button">Download states</button>
+              <button class="btn" id="export-csv" type="button">Export CSV</button>
+              <button class="btn btn--ghost" id="download-template" type="button">Download sample</button>
+              <label class="btn btn--ghost" for="import-csv">Import CSV
+                <input id="import-csv" type="file" accept=".csv,text/csv" hidden />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters">
+          <label>
+            <span>Search</span>
+            <input id="search" type="search" placeholder="Suburb, site name, impact..." />
+          </label>
+          <label>
+            <span>State</span>
+            <select id="state-filter"></select>
+          </label>
+          <label>
+            <span>Brand</span>
+            <select id="brand-filter"></select>
+          </label>
+          <label>
+            <span>Risk</span>
+            <select id="rating-filter"></select>
+          </label>
+          <label>
+            <span>Type</span>
+            <select id="type-filter"></select>
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table class="site-table">
+            <thead>
+              <tr>
+                <th>State</th>
+                <th>Site</th>
+                <th>Brand</th>
+                <th>Type</th>
+                <th>Rating</th>
+                <th>Direct area</th>
+                <th>Impact summary</th>
+              </tr>
+            </thead>
+            <tbody id="site-rows"></tbody>
+          </table>
+        </div>
+        <details class="csv-panel">
+          <summary>CSV format</summary>
+          <p>Use these columns in this order:</p>
+          <code>state,site_name,brand,site_type,risk_rating,direct_area,impact_summary</code>
+          <p>
+            Risk ratings should be one of <code>High</code>, <code>Moderate</code>, <code>Watch</code>, or <code>Low</code>.
+          </p>
+          <p class="csv-note" id="csv-status">No validation issues yet.</p>
+          <textarea id="csv-input" rows="8" spellcheck="false" placeholder="Paste CSV here to import, then click Apply CSV"></textarea>
+          <div class="csv-actions">
+            <button class="btn" id="apply-csv" type="button">Apply CSV</button>
+            <button class="btn btn--ghost" id="reset-csv" type="button">Reset sample data</button>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel" id="method">
+        <div class="panel__header">
+          <div>
+            <h2>Method and caveat</h2>
+            <p>How the ratings are derived and how to use the site list.</p>
+          </div>
+        </div>
+        <div class="notes-grid">
+          <article>
+            <h3>Rating logic</h3>
+            <ul>
+              <li>High: direct overlap with elevated fire potential or likely access disruption.</li>
+              <li>Moderate: nearby exposure or plausible spillover impact.</li>
+              <li>Watch: monitor because conditions could deteriorate quickly.</li>
+              <li>Low: limited expected impact, retained for footprint completeness.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Impact categories</h3>
+            <ul>
+              <li>Customer access</li>
+              <li>Staff mobility</li>
+              <li>Branch trading</li>
+              <li>Digital and call-centre demand</li>
+              <li>Power, comms, smoke and road disruption</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Public-location caveat</h3>
+            <ul>
+              <li>Locations are indicative public-facing sites only.</li>
+              <li>They are not an internal asset or property register.</li>
+              <li>Use live locators before external distribution or operational action.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

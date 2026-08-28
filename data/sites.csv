@@ -1,0 +1,20 @@
+state,site_name,brand,site_type,risk_rating,direct_area,impact_summary
+VIC,Melbourne CBD,ANZ,Business centre,Moderate,Metro spillover from western and northern Victoria,"Customer access changes, commuter disruption, and higher demand on remote servicing."
+VIC,Geelong,ANZ,Branch,Watch,Western Victorian interface and regional corridors,Short-notice branch-hour changes and travel disruption.
+VIC,Victoria customer touchpoints,Suncorp,Customer service point,Watch,Metro and regional access dependence,Customer-service load shifts toward digital and phone channels.
+NSW,Sydney CBD,ANZ,Business centre,High,Northern and south-eastern NSW fire-weather spillover,"Branch access pressure, smoke-related delays, and call-centre surges."
+NSW,Newcastle,ANZ,Branch,Moderate,Northern NSW exposure and transport corridors,Potential access disruption and contingency routing for staff and couriers.
+NSW,NSW customer support,Suncorp,Customer service point,Moderate,Metropolitan and regional customer concentration,Increased claims and hardship-demand traffic.
+QLD,Brisbane CBD,ANZ,Business centre,High,South-east Queensland fire-weather belt,"Retail access disruption, regional delays, and possible shortened hours."
+QLD,Brisbane service presence,Suncorp,Business centre,High,Queensland headquarters and customer footprint,Highest visible public-footprint sensitivity in the network.
+QLD,Coastal growth corridors,ANZ,Branch,Moderate,South-east Queensland commuter routes,"Smoke, road and access disruption may affect appointments."
+NT,Darwin,ANZ,Branch,High,Top End dry-season perimeter fire activity,"Transport interruption, comms stress, and heavier digital-service reliance."
+NT,Palmerston,Suncorp,Customer service point,Moderate,Top End access dependence,Assisted-service demand may rise if roads or power are interrupted.
+TAS,Hobart,ANZ,Branch,Watch,Island-wide smoke and access spillover,Short duration access disruption and appointment changes.
+TAS,Launceston,ANZ,Branch,Moderate,North-eastern Tasmania watch area,Regional travel friction and greater dependence on digital support.
+SA,Adelaide CBD,ANZ,Business centre,Watch,Adelaide Hills and peri-urban fire interface,Temporary access limitations and staff travel disruption.
+SA,Adelaide service presence,Suncorp,Customer service point,Watch,South Australian customer and service dependence,Customer-service demand may rise during smoke or heat events.
+WA,Perth CBD,ANZ,Business centre,Moderate,South-west and urban-fringe fire weather,Access disruption and short-notice branch reconfiguration.
+WA,South-west corridor,ANZ,Branch,Watch,Fast-developing fire-weather interface zones,Smoke-related business continuity pressure.
+ACT,Canberra,ANZ,Business centre,Watch,ACT and surrounding NSW fire conditions,"Smoke, road disruptions, and elevated remote-service demand."
+ACT,Canberra customer presence,Suncorp,Customer service point,Low,Secondary exposure from surrounding regions,Mainly indirect effects and monitoring needs.
